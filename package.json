@@ -1,6 +1,7 @@
 {
   "name": "insulter",
   "version": "0.0.1",
+  "homepage": "https://szar.dev/insulter/",
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
