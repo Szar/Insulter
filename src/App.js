@@ -4,9 +4,6 @@ import './App.scss';
 class App extends React.Component {
 	constructor(props, context) {
 		super(props, context);
-		const r = 4,
-			c = 4;
-		
 		this.state = {
 			insult: '',
 			active: false,
@@ -18,8 +15,6 @@ class App extends React.Component {
 		this.nouns = ["goon", "bean", "snack", "boy", "anime", "fuck", "weeb", "coward", "headass", "smegma", "donkey", "camel", "goat", "ganglion", "old person", "toe-sucker", "troglodyte", "cuck", "dweeb", "milk jug", "slug", "boi", "girl", "grill", "cunt", "furry", "nugget", "autist", "gay"]
 		this.insult = this.insult.bind(this)
 		this.rand = this.rand.bind(this)
-		this.title = "Test App";
-		
 	}
 
 	rand(a) {
