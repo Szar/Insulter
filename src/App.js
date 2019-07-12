@@ -15,6 +15,7 @@ class App extends React.Component {
 		this.nouns = ["goon", "bean", "snack", "boy", "anime", "fuck", "weeb", "coward", "headass", "smegma", "donkey", "camel", "goat", "ganglion", "old person", "toe-sucker", "troglodyte", "cuck", "dweeb", "milk jug", "slug", "boi", "girl", "grill", "cunt", "furry", "nugget", "autist", "gay"]
 		this.insult = this.insult.bind(this)
 		this.rand = this.rand.bind(this)
+		this.history = []
 	}
 
 	rand(a) {
@@ -28,6 +29,10 @@ class App extends React.Component {
 			c = this.rand(this.curseWords),
 			i = a+" "+c+" "+n,
 			t = this;
+		this.history.push(i)
+		if(this.history.length>100) {
+			this.history.shift()
+		}
 		this.setState({
 			active: true,
 			transitioning: this.state.active?true:false,
